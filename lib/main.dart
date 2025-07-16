@@ -1,4 +1,5 @@
 import 'package:filmleruygulamasi/ui/cubits/diziler_sayfa_cubit.dart';
+import 'package:filmleruygulamasi/ui/cubits/filmler_detay_sayfa_cubit.dart';
 import 'package:filmleruygulamasi/ui/cubits/filmler_sayfa_cubit.dart';
 import 'package:filmleruygulamasi/ui/views/sabit_yapilar.dart';
 import 'package:flutter/material.dart';
@@ -18,12 +19,14 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => FilmlerSayfaCubit()),
         BlocProvider(create: (context) => DizilerSayfaCubit()),
+        BlocProvider(create: (context) => FilmlerDetaySayfaCubit()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
         ),
         home: const SabitYapilar(),
       ),

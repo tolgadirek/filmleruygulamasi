@@ -1,5 +1,6 @@
 import 'package:filmleruygulamasi/data/entitiy/diziler.dart';
 import 'package:filmleruygulamasi/data/entitiy/filmler.dart';
+import 'package:filmleruygulamasi/data/entitiy/filmler_detay.dart';
 import 'package:filmleruygulamasi/data/services/dio_service.dart';
 
 class ProjeDaoRepository{
@@ -30,6 +31,20 @@ class ProjeDaoRepository{
     } catch (e) {
       print('Hata: $e');
       return [];
+    }
+  }
+
+  Future<FilmlerDetay?> filmlerDetayGetir(int movieId) async {
+    try {
+      final response = await dio.get('/movie/$movieId', queryParameters: {
+        'language': 'en-US',
+        'append_to_response': 'videos,credits',
+      });
+
+      return FilmlerDetay.fromJson(response.data);
+    } catch (e) {
+      print('Hata: $e');
+      return null;
     }
   }
 }

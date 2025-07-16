@@ -31,7 +31,7 @@ class _FilmlerSayfaState extends State<FilmlerSayfa> {
                     var film = filmlerListesi[index];
                     return GestureDetector(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const FilmlerDetaySayfa()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => FilmlerDetaySayfa(film: film)));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),

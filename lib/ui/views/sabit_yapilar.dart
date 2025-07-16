@@ -19,6 +19,7 @@ class _SabitYapilarState extends State<SabitYapilar> {
         title: Text("Films and Series", style: TextStyle(color: Colors.white),),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: sayfalar[secilenIndex],
       bottomNavigationBar: BottomNavigationBar(
