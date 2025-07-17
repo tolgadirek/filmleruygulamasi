@@ -31,7 +31,7 @@ class _DizilerSayfaState extends State<DizilerSayfa> {
                   var dizi = dizilerListesi[index];
                   return GestureDetector(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const DizilerDetaySayfa()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => DizilerDetaySayfa(dizi: dizi,)));
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(10),
@@ -40,7 +40,7 @@ class _DizilerSayfaState extends State<DizilerSayfa> {
                           padding: const EdgeInsets.all(20),
                           child: Column(
                             children: [
-                              Image.network('https://image.tmdb.org/t/p/w300${dizi.posterPath}',),
+                              Image.network('https://image.tmdb.org/t/p/w200${dizi.posterPath}',),
                               SizedBox(height: 20,),
                               Text(dizi.name, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
                               SizedBox(height: 20,),
@@ -59,8 +59,6 @@ class _DizilerSayfaState extends State<DizilerSayfa> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 20,),
-                              Text(dizi.overview, style: TextStyle(fontSize: 18),),
                             ],
                           ),
                         ),

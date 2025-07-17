@@ -1,3 +1,4 @@
+import 'package:filmleruygulamasi/ui/cubits/diziler_detay_sayfa_cubit.dart';
 import 'package:filmleruygulamasi/ui/cubits/diziler_sayfa_cubit.dart';
 import 'package:filmleruygulamasi/ui/cubits/filmler_detay_sayfa_cubit.dart';
 import 'package:filmleruygulamasi/ui/cubits/filmler_sayfa_cubit.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => FilmlerSayfaCubit()),
         BlocProvider(create: (context) => DizilerSayfaCubit()),
         BlocProvider(create: (context) => FilmlerDetaySayfaCubit()),
+        BlocProvider(create: (context) => DizilerDetaySayfaCubit()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

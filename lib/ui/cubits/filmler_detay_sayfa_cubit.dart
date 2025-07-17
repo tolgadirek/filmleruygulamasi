@@ -8,7 +8,7 @@ class FilmlerDetaySayfaCubit extends Cubit<FilmlerDetay?> {
   var prepo = ProjeDaoRepository();
 
   Future<void> filmlerDetayGetir(int movieId) async {
-    final detay = await prepo.filmlerDetayGetir(movieId);
+    var detay = await prepo.filmlerDetayGetir(movieId);
     emit(detay);
 
   }

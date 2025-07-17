@@ -40,7 +40,7 @@ class _FilmlerSayfaState extends State<FilmlerSayfa> {
                             padding: const EdgeInsets.all(20),
                             child: Column(
                               children: [
-                                Image.network('https://image.tmdb.org/t/p/w300${film.posterPath}',),
+                                Image.network('https://image.tmdb.org/t/p/w200${film.posterPath}',),
                                 SizedBox(height: 20,),
                                 Text(film.title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
                                 SizedBox(height: 20,),
@@ -54,14 +54,10 @@ class _FilmlerSayfaState extends State<FilmlerSayfa> {
                                         Text("Popularity : ${film.popularity}", style: TextStyle(fontSize: 16),),
                                         Text("Vote Average : ${film.voteAverage}", style: TextStyle(fontSize: 16),),
                                         Text("Vote Count : ${film.vote_count}", style: TextStyle(fontSize: 16),),
-
-
                                       ],
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 20,),
-                                Text(film.overview, style: TextStyle(fontSize: 18),),
                               ],
                             ),
                           ),

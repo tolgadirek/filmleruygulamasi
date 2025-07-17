@@ -71,8 +71,6 @@ class _FilmlerDetaySayfaState extends State<FilmlerDetaySayfa> {
                       ),
                       SizedBox(height: 20,),
                       Text(filmDetay.overview, style: TextStyle(fontSize: 18),),
-
-
                     ],
                   ),
                 ),

@@ -16,22 +16,10 @@ class FilmlerDetay {
   final String status;
 
   FilmlerDetay({
-    required this.id,
-    required this.title,
-    required this.overview,
-    required this.backdropPath,
-    required this.voteAverage,
-    required this.voteCount,
-    required this.genres,
-    required this.runtime,
-    required this.belongToCollection,
-    required this.budget,
-    required this.homepage,
-    required this.originalLanguage,
-    required this.popularity,
-    required this.releaseDate,
-    required this.status,
-  });
+    required this.id, required this.title, required this.overview, required this.backdropPath, required this.voteAverage,
+    required this.voteCount, required this.genres, required this.runtime, required this.belongToCollection,
+    required this.budget, required this.homepage, required this.originalLanguage, required this.popularity,
+    required this.releaseDate, required this.status,});
 
   factory FilmlerDetay.fromJson(Map<String, dynamic> json) {
     return FilmlerDetay(
