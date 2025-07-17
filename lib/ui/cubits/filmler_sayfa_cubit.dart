@@ -11,4 +11,10 @@ class FilmlerSayfaCubit extends Cubit<List<Filmler>>{
     var liste = await prepo.filmleriGetir();
     emit(liste);
   }
+
+
+  Future<void> filmAra(String arananKelime) async {
+    var liste = await prepo.filmAra(arananKelime);
+    emit(liste);
+  }
 }

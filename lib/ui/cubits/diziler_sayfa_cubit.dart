@@ -12,5 +12,8 @@ class DizilerSayfaCubit extends Cubit<List<Diziler>> {
     emit(liste);
   }
 
-
+  Future<void> diziAra(String arananKelime) async {
+    var liste = await prepo.diziAra(arananKelime);
+    emit(liste);
+  }
 }
