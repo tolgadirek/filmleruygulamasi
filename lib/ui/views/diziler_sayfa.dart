@@ -23,32 +23,33 @@ class _DizilerSayfaState extends State<DizilerSayfa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          TextField(
-            controller: tfAra,
-            onChanged: (value) {
-              context.read<DizilerSayfaCubit>().diziAra(value);
-            },
-            decoration: const InputDecoration(
-              hintText: "Ara",
-              prefixIcon: Icon(Icons.search),
-              border: OutlineInputBorder(),),
-          ),
-          Expanded(
-            child: BlocBuilder<DizilerSayfaCubit, List<Diziler>>(
-                builder: (context, dizilerListesi) {
-                  if(dizilerListesi.isNotEmpty){
-                    return ListView.builder(
-                      itemCount: dizilerListesi.length,
-                      itemBuilder: (context, index) {
-                        var dizi = dizilerListesi[index];
-                        return GestureDetector(
-                          onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => DizilerDetaySayfa(dizi: dizi,)));
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            TextField(
+              controller: tfAra,
+              onChanged: (value) {
+                context.read<DizilerSayfaCubit>().diziAra(value);
+              },
+              decoration: const InputDecoration(
+                hintText: "Ara",
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(),),
+            ),
+            SizedBox(height: 10,),
+            Expanded(
+              child: BlocBuilder<DizilerSayfaCubit, List<Diziler>>(
+                  builder: (context, dizilerListesi) {
+                    if(dizilerListesi.isNotEmpty){
+                      return ListView.builder(
+                        itemCount: dizilerListesi.length,
+                        itemBuilder: (context, index) {
+                          var dizi = dizilerListesi[index];
+                          return GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => DizilerDetaySayfa(dizi: dizi,)));
+                            },
                             child: Card(
                               child: Padding(
                                 padding: const EdgeInsets.all(20),
@@ -77,19 +78,19 @@ class _DizilerSayfaState extends State<DizilerSayfa> {
                                 ),
                               ),
                             ),
-                          ),
-                        );
-                      },
-                    );
-                  } else {
-                    return const Center(
-                      child: CircularProgressIndicator(),
-                    );
+                          );
+                        },
+                      );
+                    } else {
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
                   }
-                }
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
