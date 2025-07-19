@@ -1,16 +1,15 @@
-# filmleruygulamasi
+# 🎯 Filmler Uygulaması
 
-A new Flutter project.
+Bu proje, Flutter üzerinde **API'den veri çekme**, **Bloc (Cubit)** yapısını kullanarak bu verileri **ekranda yönetme** ve gösterme pratikleri üzerine geliştirilmiştir. 
 
-## Getting Started
+Amaç; bir API key yardımıyla film ve dizi bilgilerini bir web servisinden çekmek, bu verileri `repository` ve `Cubit` katmanlarıyla işleyip, kullanıcı arayüzünde gösterebilmektir.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🧪 Proje Amacı
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 🔑 Bir **API key** kullanarak dış bir API'den canlı veri çekmek.
+- 🔄 Verileri `Dio` paketiyle asenkron olarak almak.
+- 📦 `Bloc (Cubit)` yapısını kullanarak durumu yönetmek.
+- 🎥 Filmleri ve dizileri ayrı ayrı listeleyip detaylarını göstermek.
+- 📚 Katmanlı mimari kullanımı: `data`, `ui`, `repo`, `services`.
